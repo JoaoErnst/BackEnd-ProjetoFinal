@@ -1,0 +1,49 @@
+- composer require slim/slim:"4.*"
+- composer require slim/psr7
+- composer require php-di/php-di
+- composer require phpunit/phpunit --dev
+
+- Criar um arquivo chamado .gitignore
+
+vendor/
+.idea/
+
+- Criar estrutura de diretório
+
+- Configurar o autoload no composer.json
+
+"autoload": {
+  "psr-4": {
+    "App\\": "src/"
+  }
+},
+"autoload-dev": {
+  "psr-4": {
+    "App\\Test\\": "tests/"
+  }
+}
+
+- Criar arquivos .htaccess na raiz do projeto
+- Criar arquivos .htaccess dentor do diretório public
+
+- Criar o index.php dentro do diretório public
+
+<?php
+(require __DIR__ . '/../config/bootstrap.php')->run();
+
+- Criar todos arquivos de configuração do diretório config
+
+settings.php
+bootstrap.php
+routes.php
+middleware.php
+container.php
+
+- instalacao de uma lib para o base path
+composer require selective/basepath
+
+após a instalaçao, adicionar código em:
+container.php
+middleware.php
+
+- 
